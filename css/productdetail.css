@@ -1,0 +1,256 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+:root {
+  --primary-color: #1a1a40;
+  --light-color: #ed6663;
+  --secondary-color: #f6e3c5;
+  --grey-secondary-color: #999;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+header {
+  padding-bottom: 100px;
+}
+.container-fluid {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.breadcrums {
+  display: flex;
+  gap: 10px;
+}
+.breadcrums a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.breadcrums li {
+  list-style: none;
+}
+.breadcrums a:hover {
+  text-decoration: underline;
+}
+.breadcrums a.active {
+  font-weight: bold;
+}
+.breadcrums span {
+  font-weight: bold;
+}
+.breadcrums-item:not(:last-of-type)::after {
+  content: "/";
+  color: var(--primary-color);
+}
+
+.product-detail-main {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+}
+.product-left {
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid var(--primary-color);
+}
+.product-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  width: 100%;
+}
+.product-right .product-title {
+  font-size: 40px;
+  font-variant: var(--primary-color);
+}
+.product-right .product-price {
+  font-size: 18px;
+  color: var(--light-color);
+}
+.product-desc {
+  font-size: 16px;
+  color: var(--grey-secondary-color);
+  height: 200px;
+  overflow-x: hidden;
+  word-break: break-word;
+  text-overflow: ellipsis;
+}
+
+.product-right input {
+  width: 50px;
+  height: 30px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}
+.product-right .btn-add-cart button {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 18px;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  border: none;
+}
+.product-right .btn-add-cart:hover button {
+  background-color: var(--light-color);
+}
+.headding {
+  font-size: 40px;
+  padding-top: 50px;
+  text-align: center;
+  color: var(--primary-color);
+}
+.related {
+  margin-top: 100px;
+}
+.card-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0;
+}
+.card-item {
+  width: calc(100% / 3 - 20px);
+  height: 450px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  padding: 10px 0;
+  display: 1;
+  max-width: 280px;
+  flex-direction: column;
+  margin-top: auto;
+  word-break: break-all;
+  overflow: hidden;
+}
+.card-content .card-title {
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-desc {
+  height: 50px;
+  overflow: hidden;
+  word-break: break-word;
+}
+.card-content .card-title a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 20px;
+}
+.card-action {
+  /* display: flex;
+  justify-content: space-between;
+  margin: 10px 0; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-action-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.card-action a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid var(--grey-secondary-color);
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: all 0.2s linear;
+}
+.card-action a:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+.card-price span {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--light-color);
+}
+.card-image {
+  width: 200px;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-action button {
+  width: 100%;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.2s linear;
+  border: none;
+  outline: none;
+}

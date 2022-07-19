@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+:root {
+  --primary-color: #1a1a40;
+  --light-color: #ed6663;
+  --secondary-color: #f6e3c5;
+  --grey-secondary-color: #999;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+footer {
+  background: var(--secondary-color);
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+.menu-item-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.menu-item-footer a {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+.menu-item-footer span {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+.menu-footer {
+  display: flex;
+  justify-content: space-between;
+}

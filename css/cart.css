@@ -1,0 +1,273 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+:root {
+  --primary-color: #1a1a40;
+  --light-color: #ed6663;
+  --secondary-color: #f6e3c5;
+  --grey-secondary-color: #999;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  position: relative;
+}
+.container-fluid {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.headding {
+  font-size: 30px;
+  padding-top: 100px;
+  text-align: center;
+  color: var(--primary-color);
+}
+.table {
+  height: 350px;
+  overflow-y: auto;
+  margin-bottom: 50px;
+}
+.content-table {
+  margin-top: 20px;
+  text-align: center;
+  border-collapse: collapse;
+  font-size: 18px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.content-table thead tr {
+  background-color: var(--grey-secondary-color);
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+.content-table tbody tr {
+  border-bottom: 1px solid #efefef;
+}
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f2f2f2;
+}
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--grey-secondary-color);
+}
+.content-table td img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-product {
+  width: 40px;
+  height: 100px;
+}
+.quantity input {
+  width: 50px;
+  height: 30px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.bill {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #eeeeee;
+  padding: 10px 20px;
+  width: 300px;
+  height: 200px;
+}
+.temporary,
+.total {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+.temporary span {
+  font-size: 18px;
+}
+.total span {
+  font-weight: bold;
+  font-size: 18px;
+}
+.btn-pay button {
+  color: white;
+  background: var(--primary-color);
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.btn-update button {
+  color: white;
+  background: var(--primary-color);
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: block;
+}
+.discount span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.discount input {
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.discount button {
+  color: white;
+  background: var(--primary-color);
+  padding: 10px;
+  border: none;
+  outline: none;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.content-table i {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+/* modal
+ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  width: 600px;
+}
+.close i {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-content h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.modal-content p {
+  text-align: center;
+  font-size: 20px;
+}
+.modal-content button {
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-left: auto;
+  display: block;
+}
+.modal-body .form-group input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border: 1px solid var(--grey-secondary-color);
+  font-size: 20px;
+  color: var(--primary-colorr);
+  width: 100%;
+}
+.modal-body .form-group label {
+  font-size: 18px;
+  font-weight: bold;
+}
+.modal-body .form-group textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border: 1px solid var(--grey-secondary-color);
+  font-size: 20px;
+  color: var(--primary-colorr);
+  width: 100%;
+}
+.form-main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
